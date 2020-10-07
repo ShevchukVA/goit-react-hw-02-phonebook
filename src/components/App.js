@@ -74,7 +74,7 @@ export default class PhoneBook extends Component {
           onBanContact={this.handleBanContact}
         />
         <h2>Contacts</h2>
-        {visibleContacts.length > 1 && (
+        {visibleContacts.length > 0 && (
           <Filter value={filter} onChangeFilter={this.handleFilterContacts} />
         )}
         <ContactList

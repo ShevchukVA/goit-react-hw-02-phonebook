@@ -11,12 +11,12 @@ export default class ContactForm extends Component {
     const { name, value } = target;
 
     this.setState({ [name]: value });
+    this.props.onBanContact(this.state);
   };
 
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.onBanContact(this.state);
     this.props.onAddContact(this.state);
     this.setState({ name: '', number: '' });
   };
