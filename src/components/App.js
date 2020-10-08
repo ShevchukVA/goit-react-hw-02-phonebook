@@ -64,7 +64,7 @@ export default class PhoneBook extends Component {
   };
 
   render() {
-    const { filter } = this.state;
+    const { contacts, filter } = this.state;
     const visibleContacts = this.handleShowFilterContact();
     return (
       <div>
@@ -74,7 +74,7 @@ export default class PhoneBook extends Component {
           onBanContact={this.handleBanContact}
         />
         <h2>Contacts</h2>
-        {visibleContacts.length > 0 && (
+        {contacts.length > 0 && (
           <Filter value={filter} onChangeFilter={this.handleFilterContacts} />
         )}
         <ContactList
